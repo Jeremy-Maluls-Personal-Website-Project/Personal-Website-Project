@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="html" lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- <Script src="portfolio.js"> </Script> -->
+    </head>
+
+    <body class="body">
+        <header class="GBA">
+            <div style="
+                width: 300px;
+                ">
+                <h1 class="name"> Jeremy Malul</h1>
+
+            </div>
+            <h2 style="
+                margin-left: auto;
+                margin-top: auto;
+                margin-bottom: auto;">
+                <nav class="headermargin">
+                    <button><a href="index.html">Home</a></button>
+                    <button> <a href="about.html">About</a></button>
+                    <button> <a href="portfolio.html">Portfolio </a>
+                    </button>
+                    <button> <a href="Contact.html">Contact</a> </button>
+                </nav>
+            </h2>
+        </header>
+        <div class="container">
+            <div style="padding-inline: 227px;">
+
+                <main>
+                    <h1 class="Home">Contact Page!</h1>
+                </main>
+            </div>
+        </div>
+        <div>
+
+            <h1>Contant Info
+            </h1>
+
+
+            <form onsubmit="myFunction()">
+                <div class="Contactgrid">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname">
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname">
+                    <label for="Email">Email</label>
+                    <input type="text" id="Email" name="Email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+
+                    <label for="message">Leave a message!</label>
+                    <input type="text" id="message" name="message">
+
+                </div>
+                <input onclick="Submit()" class="Submit" type="button" value="Submit">
+            </form>
+        </div>
+
+        <div>
+            <img class="column7" src="column22.jpeg">
+        </div>
+        <div>
+            <img class="column2" src="column22.jpeg">
+        </div>
+    </body>
+    <script>
+        function Submit() {
+            alert("Thanks " + document.getElementById("fname").value + " " + document.getElementById("lname").value + "!")
+            window.open("https://www.youtube.com/watch?v=nAW6y_LQM0A&ab_channel=SillyCarlTV")
+        }
+
+    </script>
+
+</html>
