@@ -45,10 +45,10 @@
             </h1>
 
 
-            <form onsubmit="myFunction()">
+            <form id="form" onsubmit="myFunction()">
                 <div class="Contactgrid">
                     <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" id="fname" name="fname" required>
                     <label for="lname">Last name:</label>
                     <input type="text" id="lname" name="lname">
                     <label for="Email">Email</label>
@@ -60,15 +60,15 @@
                     <input type="text" id="message" name="message">
 
                 </div>
-                <input onclick="Submit()" class="Submit" type="button" value="Submit">
+                <input onclick="Submit()" class="Submit" type="submit" id="submit">
             </form>
         </div>
 
         <div>
-            <img class="column7" src="column22.jpeg">
+            <img class="column5" src="column22.jpeg">
         </div>
         <div>
-            <img class="column2" src="column22.jpeg">
+            <img class="column6" src="column22.jpeg">
         </div>
     </body>
     <script>
@@ -76,7 +76,27 @@
             alert("Thanks " + document.getElementById("fname").value + " " + document.getElementById("lname").value + "!")
             window.open("https://www.youtube.com/watch?v=nAW6y_LQM0A&ab_channel=SillyCarlTV")
         }
+        // add submission code
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec'
 
+        form.addEventListener('submit', e => {
+            submitButton.disabled = true
+            e.preventDefault()
+            let requestBody = new FormData(form)
+            fetch(scriptURL, { method: 'POST', body: requestBody })
+                .then(response => {
+                    alert('Success!', response)
+                    submitButton.disabled = false
+                })
+                .catch(error => {
+                    alert('Error!', error.message)
+                    submitButton.disabled = false
+
+                }
+                )
+        })
     </script>
 
 </html>

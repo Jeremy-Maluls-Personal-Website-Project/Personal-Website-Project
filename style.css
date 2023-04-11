@@ -7,7 +7,7 @@
     padding: -20px;
     margin-left: 0px;
     background-image: url(space.jpeg);
-
+    gap: 2%;
 }
 
 .aboutGrid h4 {
@@ -73,7 +73,7 @@
 }
 
 .headermargin button:hover {
-    background-color: bisque !important;
+    background-color: bisque;
 }
 
 
@@ -113,7 +113,7 @@
 
 
 .body {
-    background: bisque !important;
+    background: bisque;
     max-width: 960px;
     color: #413838d6;
     margin: 0 auto;
@@ -125,59 +125,26 @@
 
     font-family: sans-serif;
     font-size: 16px;
-    background: rgba(190, 145, 56, 0.503) !important;
+    background: rgba(190, 145, 56, 0.503);
 }
 
-.column1 {
-    margin-left: -239;
-    margin-top: -785px;
-    width: 150;
-    height: 728px;
-
-}
-
-.column2 {
-    margin-left: 1035px;
-    margin-top: -785px;
-    width: 150;
-    height: 728px;
-}
-
-.column3 {
-    margin-left: -239;
-    margin-top: -930px;
-    width: 150;
-    height: 728px;
-}
-
-.column4 {
-    margin-left: 1035px;
-    margin-top: -930px;
-    width: 150;
-    height: 728px;
-
-}
 
 .column5 {
-    margin-left: -239;
-    margin-top: -1620px;
     width: 150;
     height: 728px;
+    position: absolute;
+    left: 55px;
+    top: 55px;
 }
 
 .column6 {
-    margin-left: 1035px;
-    margin-top: -1620px;
     width: 150;
     height: 728px;
+    position: absolute;
+    right: 55px;
+    top: 55px;
 }
 
-.column7 {
-    margin-left: -240px;
-    margin-top: -490px;
-    width: 150;
-    height: 728px;
-}
 
 .form {
     display: block;
@@ -200,4 +167,16 @@
     width: 90px;
     height: 30px;
 
+}
+
+@media (max-width: 1459px) {
+    .column5 {
+        display: none;
+    }
+}
+
+@media (max-width: 1459px) {
+    .column6 {
+        display: none;
+    }
 }
